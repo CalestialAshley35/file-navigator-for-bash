@@ -1,0 +1,270 @@
+exinfo
+@node Top
+@top Top
+
+@menu
+* File Navigator for Bash::
+@end menu
+
+@node File Navigator for Bash
+@chapter File Navigator for Bash
+@anchor{#file-navigator-for-bash}
+
+@menu
+* Overview::
+* Features::
+* Prerequisites::
+* Installation::
+* Usage::
+* License::
+* Contributing::
+* Contact::
+@end menu
+
+@node Overview
+@section Overview
+@anchor{#overview}
+File Navigator for Bash is a command-line tool designed to help you
+navigate, manage, and manipulate files and directories efficiently in a
+Unix-based system. It provides several useful commands such as file
+listing, file deletion, permissions management, file compression, and
+more. This tool is ideal for users who want to streamline their
+interaction with files via a terminal interface.
+
+@node Features
+@section Features
+@anchor{#features}
+@itemize
+@item
+@strong{File Management}:
+@itemize
+@item
+List files in the current directory
+@item
+Delete files
+@item
+Check file extensions and types
+@item
+Search for files
+@item
+View file contents
+@item
+Show file sizes
+@item
+Change file permissions
+@item
+Rename files
+@item
+Copy and move files
+@end itemize
+
+@item
+@strong{Directory Management}:
+@itemize
+@item
+Create and remove directories
+@item
+Change directories
+@end itemize
+
+@item
+@strong{Search and Content Management}:
+@itemize
+@item
+Search for a word within a file using @code{grep}
+@item
+Search for a word in all files within the directory
+@item
+Compress and extract files (supports @code{.zip} files)
+@end itemize
+
+@item
+@strong{Command History}:
+@itemize
+@item
+View the history of commands executed within the session
+@end itemize
+
+@end itemize
+
+@node Prerequisites
+@section Prerequisites
+@anchor{#prerequisites}
+Before using this tool, ensure that you have the following installed:
+
+@itemize
+@item
+A @strong{Unix-based system} (Linux, macOS, etc.)
+@item
+A @strong{C++ compiler} that supports C++17 or later (e.g., @code{g++}
+version 7+)
+@item
+@strong{libzip} library for file compression and extraction (@code{-lz}
+flag)
+@item
+@strong{Filesystem library} support in @code{g++} (use @code{-lstdc++fs}
+flag)
+@end itemize
+
+@node Installation
+@section Installation
+@anchor{#installation}
+@enumerate
+@item
+Clone the repository to your local machine:
+
+```bash git clone
+https://github.com/CalestialAshley35/file-navigator-for-bash.git
+
+@item
+Navigate to the project directory:
+
+@end enumerate
+
+@verbatim
+cd file-navigator-for-bash
+@end verbatim
+
+@enumerate 3
+@item
+Compile the code using g++:
+@end enumerate
+
+@verbatim
+g++ -o file-navigator main.cpp -lstdc++fs -lz
+@end verbatim
+
+@enumerate 4
+@item
+Run the program:
+@end enumerate
+
+@verbatim
+./file-navigator
+@end verbatim
+
+@node Usage
+@section Usage
+@anchor{#usage}
+Once the program is running, you can enter various commands to interact
+with files and directories. Below are the available commands:
+
+Available Commands:
+
+@itemize
+@item
+@code{help}: Displays a list of all available commands.
+@item
+@code{files}: Lists all files in the current directory.
+@item
+@code{delete <file>} Deletes the specified file.
+@item
+@code{file <file>}: Checks the extension of the specified file and
+identifies its type.
+@item
+@code{search <file>}: Searches for a file by name.
+@item
+@code{size <file>}: Displays the size of the specified file.
+@item
+@code{view <file>}: Views the contents of the specified file.
+@item
+@code{permission <perm> <file>}: Changes the permissions of the
+specified file ( should be in octal format, e.g., 755).
+@item
+@code{grep <word> <file>}: Searches for the specified word in a file
+using grep.
+@item
+@code{mkdir <dir>}: Creates a new directory with the given name.
+@item
+@code{rmdir <dir>}: Removes an empty directory.
+@item
+@code{cd <dir>}: Changes the current directory to the specified one.
+@item
+@code{copy <source> <destination>}: Copies a file from the source path
+to the destination path.
+@item
+@code{move <source> <destination>}: Moves a file from the source path to
+the destination path.
+@item
+@code{rename <old> <new>}: Renames a file from name to name.
+@item
+@code{history}: Displays the history of commands executed during the
+session.
+@item
+@code{searchcontent <word>}: Searches for the specified word in all
+files within the current directory.
+@item
+@code{compress <file>}: Compresses the specified file into a .zip
+archive.
+@item
+@code{extract <archive>}: Extracts the contents of a .zip archive.
+@end itemize
+
+Example Commands:
+
+@enumerate
+@item
+@strong{To list all files in the current directory:} @code{files}
+
+@item
+@strong{To delete a file named @code{example.txt}:}
+@code{delete example.txt}
+
+@item
+@strong{To check the type of a file @code{script.py}:}
+@code{file script.py}
+
+@item
+@strong{To search for a file called @code{index.html}:}
+@code{search index.html}
+
+@item
+@strong{To change the permissions of a file @code{script.sh} to
+@code{755}:} @code{permission 755 script.sh}
+
+@item
+@strong{To compress a file @code{document.txt} into a @code{.zip}
+archive:} @code{compress document.txt}
+
+@item
+@strong{To extract a @code{.zip} archive @code{document.zip}:}
+@code{extract document.zip}
+
+@end enumerate
+
+@iftex
+@bigskip@hrule@bigskip
+@end iftex
+@ifnottex
+------------------------------------------------------------------------
+@end ifnottex
+
+@menu
+* Command History::
+@end menu
+
+@node Command History
+@subsection Command History
+@anchor{#command-history}
+The tool maintains a history of up to the last 20 commands entered. To
+view your command history, simply use:
+
+@code{history}
+
+@node License
+@section License
+@anchor{#license}
+This project is licensed under the MIT License - see the LICENSE file
+for details.
+
+@node Contributing
+@section Contributing
+@anchor{#contributing}
+Feel free to fork the repository and contribute by opening issues or
+submitting pull requests. All contributions are welcome!
+
+@node Contact
+@section Contact
+@anchor{#contact}
+For any questions or support, you can reach out via email or open an
+issue on the GitHub repository.
