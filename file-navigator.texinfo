@@ -94,7 +94,7 @@ Before using this tool, ensure that you have the following installed:
 
 @itemize
 @item
-A @strong{Unix-based system} (Linux, macOS, etc.)
+A @strong{Unix-based system} (GNU/Linux, macOS, etc.)
 @item
 A @strong{C++ compiler} that supports C++17 or later (e.g., @code{g++}
 version 7+)
@@ -254,7 +254,7 @@ view your command history, simply use:
 @node License
 @section License
 @anchor{#license}
-This project is licensed under the MIT License - see the LICENSE file
+This project is licensed under the GNU General Public License v3.0 - see the LICENSE file
 for details.
 
 @node Contributing
