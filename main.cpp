@@ -250,7 +250,7 @@ void executeCommand(const std::string& command) {
 
 int main() {
     std::string command;
-    std::cout << "\033[1;32mWelcome to File Navigator for Termux! Type 'help' for a list of all available commands\033[0m" << std::endl;
+    std::cout << "\033[1;32mWelcome to File Navigator for Bash! Type 'help' for a list of all available commands\033[0m" << std::endl;
     while (true) {
         std::cout << "\033[1;32m~" << fs::current_path() << "\033[0m$ ";
         std::getline(std::cin, command);
