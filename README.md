@@ -33,7 +33,7 @@ File Navigator for Bash is a command-line tool designed to help you navigate, ma
 
 Before using this tool, ensure that you have the following installed:
 
-- A **Unix-based system** (Linux, macOS, etc.)
+- A **Unix-based system** (GNU/Linux, macOS, etc.)
 - A **C++ compiler** that supports C++17 or later (e.g., `g++` version 7+)
 - **libzip** library for file compression and extraction (`-lz` flag)
 - **Filesystem library** support in `g++` (use `-lstdc++fs` flag)
